@@ -1,6 +1,5 @@
 // Write the smallest missing integer in the array, bigger than 0 and not =1
 
-
 function findSmallestMissingPositive(arr) {
     // Sort the array
     arr.sort((a, b) => a - b); //ASC order
