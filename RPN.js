@@ -17,11 +17,7 @@ function evalRPN(tokens) {
             const a = stack.pop();
             const b = stack.pop();
             stack.push(b * a);
-        } else if (token === "/") {
-            const a = stack.pop();
-            const b = stack.pop();
-            // Note: Division in integer context (floor the result if negative)
-            stack.push(parseInt(b / a));
+
         } else {
             // Token is a number
             stack.push(parseInt(token));
@@ -34,5 +30,5 @@ function evalRPN(tokens) {
 const expression = ["2", "1", "+", "3", "*"];
 console.log(evalRPN(expression));  // Outputs 9
 
-const expression2 = ["4", "13", "5", "/", "+"];
-console.log(evalRPN(expression2)); // Outputs 6
+const expression2 = ["4", "13", "5", "*", "+"];
+console.log(evalRPN(expression2)); // Outputs 69
