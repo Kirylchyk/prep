@@ -1,4 +1,4 @@
-// Print first N prime(odd) numbers (нечетныей)'
+// Print first N prime(odd) numbers
 
 function doThat(arr, n) {
     let result = [];

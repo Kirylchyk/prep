@@ -1,4 +1,4 @@
-//in a given arr soft out only odd numbers
+//in a given arr sort out only odd numbers
 function doThat (arr) {
 
     let new_arr = [];
