@@ -9,6 +9,7 @@ function longestCommonPrefix(str) {
         const char = str[0][j]; // Get the character of 1st word
 
         for (let i = 1; i < str.length; i++) {
+
             if (j >= str[i].length || str[i][j] !== char) {
                 return result.join(''); // If the character doesn't match OR
                 // we reach the end of any word, return the result as a joined string.
