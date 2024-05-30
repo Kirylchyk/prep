@@ -31,9 +31,9 @@ function romanToInt(romanNumeral) {
     return result;
 }
 
-console.log(romanToInt("XXI"))
-console.log(romanToInt("IV"))
-console.log(romanToInt("VII"))
+console.log(romanToInt("XXI"))//21
+console.log(romanToInt("IV"))//4
+console.log(romanToInt("VII"))//7
 
 
 //Integer to Roman
