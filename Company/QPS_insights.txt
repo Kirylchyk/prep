@@ -1,0 +1,96 @@
+sql:
+// returns only those rows that have matching values in *both tables*
+// join === inner join
+
+// LEFT JOIN -> return all rows from the left table,
+ regardless of whether they have matches in the right table,
+  filling in with NULLs where there are no matches.
+
+SELECT
+    Employees.name,
+    Departments.department_name
+FROM
+    Employees
+JOIN
+    Departments ON Employees.department_id = Departments.id
+WHERE
+    Departments.department_name = 'IT'
+ORDER BY
+    Employees.name ASC;
+
+// Artificial Intelligence (AI) and Machine Learning (ML)
+ML is a subset of AI focused specifically on the idea that machines
+can learn from data,
+identify patterns, and make decisions with minimal human intervention
+While AI normally require human intelligence
+
+// Pymetrics test
+cognitive-logic games
+
+// HR System
+- reporting
+- payroll
+- correspondence with emp
+- pto/leave mgmt
+- recruitment
+- training/onboarding/offboarding
+- performance
+
+
+SAP+Workday
+SAP: Might be used for payroll and benefits management, compliance across different countries,
+or its integration with other SAP enterprise solutions like ERP for finance and logistics.
+
+Workday: Could be preferred for its user-friendly interface, innovative human capital management features,
+analytics, and workforce planning tools.
+
+Integrating an SAP Payroll module with the existing HRMS
+_______________________________________________________________________________________________________
+ParkingGarage
+
+//Estimation01
+Total Slots: 8,000 spaces
+Occupancy Rate: 70% are occupied
+Average Stay: 5 hours
+1 level, 1 entrance, 1 exit
+
+Total Parked Cars = Total Slots × Occupancy Rate = 8,000 × 0.7 = 5,600 cars
+Cars Leaving Per Hour= Total Parked Cars / Average Stay = 5,600/5 = 1,120 per hour
+Cars Per Second = QPS = Cars per Hour / Seconds in an hour = 1,120 /3,600 = 0.3 cars per sec
+(or 1 car in 3 sec)
+
+//Estimation02
+Total Slots: 8,000 spaces
+Occupancy Rate: 70%
+Average Stay: 5 hours
+4 levels
+2 entrances and 2 exits per level (total of 8 entrances and 8 exits)
+
+Total Parked Cars = Total Slots × Occupancy Rate = 8,000 × 0.7 = 5,600 cars
+Cars Leaving Per Hour = Total Parked Cars / Average Stay = 5,600/5 = 1,120 per hour
+Cars per Entrance per Hour = Cars Leaving Per Hour / Total Entrances = 1,120 / 8 = 140 per hour per entrance/exit
+Cars per Second per Entrance = Cars per Entrance per Hour / Seconds per hour = 140 / 3600 = 0.04
+QPS = Cars Per Second = 0.04 * 8 = 0.32
+(or 1 car in 3 sec)
+
+In both scenarios, the total QPS across the entire system is roughly the same when calculated over all entrances/exits.
+ In the second scenario, each entrance/exit has less pressure because the load is distributed,
+  but when summed up, the total QPS across the system doesn't increase.
+
+________________________________________________________________________
+
+Scalability, extensibility, and maintainability of system
+ - If QPS > 1000, scalability (Load Balancer, Cache (Vertical Scaling) or Sharding (Horizontal Scaling)
+-  Extensibility is the ability of a system to accommodate new functionality without significant disruption
+ to existing system operations.
+ - Maintainability refers to how easily a software system can be maintained over time to correct faults,
+ improve performance, or adapt to a changed environment -> replica
+
+
+Why replication?
+- Redundancy and fault tolerance
+- downtime
+- Amazon Relational Database Service (RDS) is a managed database service provided by Amazon Web Services (AWS)
+-  Service Level Agreement (SLA) is a formal contract between a service provider and a client -Ю
+ For cloud services like AWS, SLAs often cover aspects such as system uptime,
+  data availability, and the performance guarantees of the service.

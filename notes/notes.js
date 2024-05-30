@@ -1,4 +1,4 @@
-// replace(/s/g, "") will remove all whitespace characters from the string.
+// .replace(/\s/g, "") will remove all whitespace characters from the string.
 
 // a "stack" refers to a specific data structure
 // that operates on the principle of "Last In, First Out" (LIFO).
@@ -18,8 +18,7 @@ class Stack {
 let stack = new Stack();
 stack.push(1);
 stack.push(5);
-stack.push(8);
-console.log(stack); //1,5,8
+console.log(stack); //1,5
 
 
 //let arrayFromString = string.split(" "); // Split string by spaces
@@ -45,3 +44,24 @@ console.log(typeof stack);
 // || logical OR
 //>=
 //<=
+
+const numbers = [10, 5, 3, 8, 2, 6];
+numbers.sort(function(a, b) {
+    return a - b; // Ascending order
+});
+
+//selector-> function-> addEventListener
+const button = document.querySelector("button");
+button.addEventListener("click", function() {
+    console.log("I am clicked!");
+});
+
+//Arrow vs regular function
+function add(a, b) {
+    return a + b;
+}
+
+
+const add2 = (a, b) => {
+    return a + b;
+};
