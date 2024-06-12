@@ -21,8 +21,20 @@ class Library {
     }
 
     removeBook(title) {
-        this.books = this.books.filter(book => book.title !== title);
+        // Find the index of the book with the given title using a traditional function
+        const index = this.books.findIndex(function(book) {
+            return book.title === title;
+        });
+
+        // If the book is found (index is not -1), remove it from the array
+        if (index !== -1) {
+            this.books.splice(index, 1);  // Remove the book at the found index by using splice
+            console.log(`Book with title '${title}' has been removed.`);
+        } else {
+            console.log(`No book found with title '${title}'.`);
+        }
     }
+
 
     listBooks() {
         if (this.books.length === 0) {
@@ -40,6 +52,7 @@ const myLibrary = new Library("Main Street Library");
 // Create some books
 const book1 = new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", 309);
 const book2 = new Book("1984", "George Orwell", 328);
+console.log(book2.getDetails());
 
 // Add books to the library
 myLibrary.addBook(book1);

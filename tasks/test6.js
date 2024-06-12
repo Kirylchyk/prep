@@ -10,7 +10,6 @@ function doThat(arr, n) {
         }
     }
 
-
     return result.slice(0, n);
 }
 

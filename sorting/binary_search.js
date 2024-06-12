@@ -22,4 +22,4 @@ function binarySearch(arr, number) {
     return false;
 }
 
-console.log (binarySearch([1,2,3,4,5,6,7,8], 8));
+console.log (binarySearch([1,2,3,4,5,6,7,8], 8)); //index 7

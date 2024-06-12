@@ -2,7 +2,7 @@
 
 
 function findShortestWord(arr) {
-    if (arr.length === 0) return null; // Handle empty array case
+    if (arr.length === 0) return false; // Handle empty array case
 
     let shortestWord = arr[0]; // Start with the first word as the shortest
 
