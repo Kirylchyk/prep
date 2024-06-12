@@ -15,6 +15,5 @@ function doThat (arr) {
 
 console.log(doThat([5,8,6,3,4]));
 
-//
 
 

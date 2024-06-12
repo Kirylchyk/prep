@@ -1,8 +1,52 @@
+//Check if users sequence press ABC to cause error
+
+function doThat(userActions, sequence) {
+    const tokens = {};
+
+    // Iterate over each user action to group key presses by userId
+    userActions.forEach(token => {
+        if (!tokens[token.userId]) {
+            // If this is the first key press for the userId, initialize with an array containing the keyPress
+            tokens[token.userId] = [token.keyPress];
+        } else {
+            // Otherwise, append to the existing array for this userId
+            tokens[token.userId].push(token.keyPress);
+        }
+    });
+
+    let result = [];
+    // Iterate over the tokens object to check if the concatenated string of
+    // key presses includes the sequence - cannot use for...of as it`s an obj
+    for (let item in tokens) {
+        let target = tokens[item].join(',');  // Concatenate key presses for each user with commas
+        if (target.includes(sequence)) {  // Check if the sequence is included
+            result.push(item);  // If so, add the userId to the result array
+        }
+    }
+    return result;
+}
+
+let sequence = 'A,B,C';
+const userActions = [
+    { userId: "user1", keyPress: "Y" },
+    { userId: "user1", keyJoin: "A" },  // This seems like a typo: keyJoin should be keyPress
+    { userId: "user2", keyPress: "A" },
+    { userId: "user2", keyPress: "B" },
+    { userId: "user2", keyPress: "C" }, // user2 should match
+    { userId: "user3", keyPress: "X" },
+    { userId: "user4", keyPress: "A" },
+    { userId: "user4", keyPress: "B" },
+    { userId: "user4", keyPress: "C" } // user4 should match
+];
+
+console.log(doThat(userActions, sequence));  // Expected output: ['user2', 'user4']
+
+
 //Given a list of error codes a -> b -> c -> error for specific user Ids,
 // find all errors that the user has received
 // (so a,b,c prompted an error, display the user Ids).
 
-function doThat(arr, obj) {
+function doThat2(arr, obj) {
     let result = [];
 
     for (let key in obj) {
@@ -21,13 +65,13 @@ const obj = {
 
 let arr = ['error2'];
 
-console.log(doThat(arr, obj)); // This should log ['userB']
+console.log(doThat2(arr, obj)); // This should log ['userB']
 
 //I was given an array of objects that included a user_id and a key pressed.
 // Given a string (that's a combination of multiple keys pressed),
 // -> to return the user who pressed them in that order.
 
-function doThat(actions, sequence) {
+function doThat3(actions, sequence) {
 
     //creating new obj from input obj
     let userMap = {};
@@ -68,7 +112,7 @@ const actions01 = [
 
 let sequence01 = "T,C"; //string
 
-console.log(doThat(actions01, sequence01));
+console.log(doThat3(actions01, sequence01));
 
 
 // Implement a hash table using JavaScript ->
@@ -78,7 +122,7 @@ console.log(doThat(actions01, sequence01));
 // and organize the data so
 // that the resulting array outputs which users had errors
 
-function doThat(actions) {
+function doThat4(actions) {
     let errors = [];  // Using an array to store user IDs with errors
     let lastKeyPress = {};   // Hashmap/object to store the last key pressed by each user
 
@@ -99,7 +143,7 @@ function doThat(actions) {
 }
 
 // Example usage:
-const userActions = [
+const userActions2 = [
     { userId: "user1", keyPress: "A" },
     { userId: "user1", keyPress: "A" },  // Error: Repeated "A"
     { userId: "user2", keyPress: "B" },
@@ -108,5 +152,8 @@ const userActions = [
     { userId: "user3", keyPress: "X" }   // Error: Repeated "X"
 ];
 
-console.log(doThat(userActions));//user1, user2
+console.log(doThat4(userActions2));//user1, user2
+
+
+
 

@@ -11,8 +11,6 @@
 // The student was never late ('L') for 3 or more consecutive days.
 // Return true if the student is eligible for an attendance award, or false otherwise.
 
-
-
 function doThat (str) {
 
     function absent() {
@@ -27,7 +25,6 @@ function doThat (str) {
         }
     }
 
-
     function late() {
         let late = [];
 
@@ -39,13 +36,10 @@ function doThat (str) {
         if (late.length < 3) {
 
             return true
-
         }
-
     }
 
     if (absent() && late()) {
-
         return true
     }
 
@@ -55,8 +49,6 @@ function doThat (str) {
 
 console.log(doThat('PPALLP')); //true
 console.log(doThat('PPALLL')); //false
-
-
 
 function checkEligibility(attendance) {
     let absences = 0;

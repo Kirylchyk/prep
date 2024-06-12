@@ -20,3 +20,10 @@ function doThat(int) {
 
 doThat(5);
 
+function greet(name, greeting) {
+    console.log(`${greeting}, ${name}!`);
+}
+
+// Setting a timeout with parameters, after 2 sec that hello will be posted
+setTimeout(greet, 2000, 'Alice', 'Hello');
+

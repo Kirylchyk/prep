@@ -1,5 +1,38 @@
 // given arr [1,1,4,6,2,3,2,4,2,2] print elements with largest occurrence
 
+function doThat(arr) {
+
+    const hash = {};
+//check values, not index (for...in)
+    for (let token of arr) {
+
+        if (!hash[token]) {
+            hash[token] = 1;
+        }
+
+        if (hash[token]) {
+            hash[token]++;
+        }
+    }
+
+    let aim = 1;
+    let result = [];
+
+    for (let item in hash) {
+        if (hash[item] > aim) {
+            aim = hash[item];
+            result = item;
+        }
+    }
+
+    return result;
+
+}
+
+let tokens = [1,1,2,2,3,3,3];//3
+
+console.log(doThat(tokens));
+
 
 function countOccurences (arr) {
 

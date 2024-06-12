@@ -40,6 +40,79 @@ class BinaryTree{
         }
 
     }
+
+    preOrder(node, callback) {
+    if (!node) {
+        return false;
+    }
+
+    if (callback) {
+        callback(node);
+    }
+
+    this.preOrder(node.left, callback);
+    this.preOrder(node.right, callback);
+
+    }
+
+    inOrder(node, callback) {
+        if (!node) {
+            return false;
+        }
+        this.inOrder(node.left, callback);
+
+        if (callback) {
+            callback(node);
+        }
+
+        this.inOrder(node.right, callback);
+    }
+
+    postOrder(node, callback) {
+        if (!node) {
+            return false;
+        }
+        this.postOrder(node.left, callback);
+        this.postOrder(node.right, callback);
+
+        if (callback) {
+            callback(node);
+        }
+
+    }
+
+    //обход в глубину; depth first search; can be in-order, pre-order, post-order
+    traverseDFS(callback, method){
+    if (method === 'preOrder') {
+        return this.preOrder(this.root, callback);
+    }
+
+    if (method === 'inOrder') {
+        return this.inOrder(this.root, callback);
+    }
+
+        return this.postOrder(this.root, callback);
+
+    }
+
+    //в ширину; breadth first search
+    traverseBFS(callback) {
+    const queue = [this.root];
+
+    while(queue.length) {
+        const node = queue.shift();
+        callback(node);
+
+        if (node.left) {
+            queue.push(node.left)
+        }
+
+        if (node.right) {
+            queue.push(node.right)
+        }
+    }
+
+    }
 }
 
 console.log("Test text");
@@ -57,3 +130,11 @@ myTree.add(11);
 
 console.log(myTree);
 
+myTree.traverseDFS( (node) => {
+    console.log(node.value)
+    },"inOrder"
+)
+
+myTree.traverseBFS( (node) => {
+        console.log(node.value)
+    })

@@ -4,9 +4,7 @@ class Stack {
     }
 
     add(item) {
-
         this.items.push(item);
-
     }
 
     peek(){
@@ -23,12 +21,7 @@ class Stack {
             console.log("true")
         }
         else (  console.log("false"))
-
-
-
     }
-
-
 }
 
 const myStack = new Stack;
@@ -38,3 +31,7 @@ myStack.add(5);
 myStack.state();
 console.log(myStack.peek());
 myStack.isEmpty();
+
+
+//queue.unshift(value) -> will add value in the beginning
+//queue.shift(value) -> will remove value in the beginning
