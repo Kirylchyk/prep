@@ -1,0 +1,53 @@
+1) Retrieve the first name and last name of all customers.
+
+SELECT first_name, last_name
+FROM customers;
+
+2) Retrieve all product descriptions which have been ordered at least once.
+(primary-foreign key)
+
+SELECT DISTINCT p.description
+FROM products p
+JOIN orders o ON p.product_id = o.product_id
+WHERE o.order_date >= '2021-01-01' AND o.order_date < '2022-01-01';
+
+3) Retrieve all customers who have placed at least two orders.
+
+SELECT c.customer_id, c.first_name, c.last_name, COUNT(o.order_id) AS order_count
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.first_name, c.last_name
+HAVING COUNT(o.order_id) >= 2;
+____________________________________________________________________________________________________
+4) JOINS
+
+** INNER JOIN  === JOIN
+->  Returns records that have matching values in both tables.
+
+SELECT orders.order_id, customers.customer_name
+FROM orders
+INNER JOIN customers ON orders.customer_id = customers.customer_id;
+
+** LEFT JOIN
+-> Returns all records from the left table (table1),
+and the matched records from the right table (table2).
+ The result is NULL from the right side if there is no match.
+
+SELECT customers.customer_name, orders.order_id
+FROM customers //(left table, table1)
+LEFT JOIN orders ON customers.customer_id = orders.customer_id;
+
+** RIGHT JOIN
+-> : Returns all records from the right table (table2),
+and the matched records from the left table (table1).
+The result is NULL from the left side if there is no match.
+
+SELECT customers.customer_name, orders.order_id
+FROM customers
+RIGHT JOIN orders //(right table, table 2) ON customers.customer_id = orders.customer_id;
+______________________________________________________________________________________
+OTHERS
+- full join
+- cross join
+- self join
+- natural join
