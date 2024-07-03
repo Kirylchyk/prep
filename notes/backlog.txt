@@ -1,0 +1,51 @@
+ Tech assessment is a game of "let's shoot them down!" but not difficult.
+- you had to color a graph so that adjacent nodes didn't have the same color
+- Create an API for Trello
+- Python assessment to make an API call and show the top package
+- Write the cache decorator in python
+-  Aptitude test on Thomas International
+- parse a binary file with python (the interviewer gives you a hstackoverflow link). You have to search the file for some data
+- coding game
+Describe your experience of web programming - JavaScript, Typescript, React, CSS
+
+Can you provide examples of when you would use utility based frameworks (such as Tailwind CSS) and component based (such as Bootstrap)
+
+What kinds of software projects have you worked on before?
+
+Which operating systems, development environments, languages, databases and frameworks?
+
+Outline your thoughts on open source software development.
+
+Describe your experience with micro-service architectures -
+web front ends, REST APIs, data stores,
+event processing and other kinds of integration between components.
+
+What are the key considerations for architecture, maintainability,
+and reliability in these large systems?
+
+styling decisions and overall feedback over their Vanilla Framework
+
+what u like/dislike about react, bootstrap, tailwind
+
+I was given a take home project that asked me to fetch some data from an API and display it using Canonical's bespoke CSS library, it was work but enjoyable.
+
+How would you design the architecture for a Parking Lot system
+
+commit messages, no automated tests, the git readme is the default one, hotloading their framework.
+
+How do you debug a web page?
+
+What experience do you have with Linux-based software development?
+Please characterise your experience of development on desktop, devices, back-end and front-end applications.
+Please describe any experience with Linux packaging.
+
+Technical assessment consistent of writing a simple command-line utility to parse some files.
+
+1. Coding to an API
+Write a CLI program with Python to add a card to a Trello board
+
+mock pr code review
+
+When you type an URL on the browser and click enter, what happens?
+
+Given a Person Class (the instance of the Person Class can be single person or a team, if it is team, then a team member will be defined as well). Then the question is that: Given a people ( a group of persons and teams, each one is the instance of the Person Class), find out all the members (direct, in direct) and and all the teams (direct or indirect) of a particular person in that group

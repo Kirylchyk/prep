@@ -1,0 +1,47 @@
+System Design
+
+Frontend React / Typescript / JavaScript / Tailwind
+
+Backend Python / Django / Django Rest Framework / SQL / Postgres / Redis / AWS
+
+Venmo
+Venmo architecture - Design a payment transfer application (similar to venmo) including DB, API, UI -> with diagram. Design an api, database database model, UI for a money transfer app (like venmo)
+
+Document
+Design a secure document-request system, getting in-depth about APIs and data storage. api design (name and describe routes with some specified functionality)
+Design the data schema, API end points, and backend file structure for an app similar to Google Docs (users can have documents, those documents can have comments from other users)
+
+Property App
+Property/apartment app: How would you design a relational database schema for apartment management (IE tenants, apartments, apartment problems, maintenance people, maintenance tickets)?- Design a database schema for a property management company where A) tenants can submit issues for their properties, B) property managers can assign tasks within issues to their building staff, C) building staff can mark their tasks complete - Make a wireframe for the frontend of the application staff can use to mark their tasks complete (using React). Explain how a click event update the UI to show a task complete and also update the database appropriately
+
+Jenkins
+Design an api, database model, UI for a clone of jenkins
+
+MongoDB
+NoSQL DB table design whiteboarding
+
+Data
+data modeling/database design (design data model for some specified app, h
+ow to query for certain data based on model)
+
+
+System - Review Collector
+Develop a system to help underwriters understand the risk of insuring any business.
+
+ In this exercise, we will only consider hotels in the US.
+  Our data science team infers structured information about hotels—such as whether
+  they have a swimming pool, or whether guests have reported bed bugs—from publicly available data
+   including user-generated content. We will design a system to support the data science team.
+    This system is responsible for collecting reviews of a given business and
+    invoking the data science team’s services to make inferences about the businesses.
+    The inferences should be displayed to the underwriter in the web application.
+    Requirements:
+    • Underwriters must be able to submit the name and address of the business through the web app.
+     • This system must determine whether it has already created a representation of the given business.
+     • This system must collect the given business’s TripAdvisor reviews.
+     • This system must interact with the data science team’s inference servers.
+     • The service must be highly available.
+     • The service must be highly scalable; ideally, it also scales to zero.
+     • Ingestion should be completed in five minutes or less.
+     • Out of scope: Businesses that are not hotels.
+     • Out of scope: Businesses that are not located in the US.
