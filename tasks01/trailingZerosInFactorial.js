@@ -16,3 +16,7 @@ function trailingZerosInFactorial(n) {
 
 // Calculate the number of trailing zeros in 24!
 console.log(trailingZerosInFactorial(24)); //4
+console.log(trailingZerosInFactorial(25)); //6
+console.log(trailingZerosInFactorial(26)); //6
+console.log(trailingZerosInFactorial(27)); //6
+console.log(trailingZerosInFactorial(30)); //7

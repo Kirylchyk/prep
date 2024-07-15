@@ -1,0 +1,19 @@
+Develop a simple website:
+Frontend: Use React.js to build a simple web page (whatever you like to present). Just like to see if you know how to use components with React.
+Backend: Use Django to build at least two API endpoints for the frontend page you created to use.
+
+Deploy the website to AWS:
+Basic requirements
+Use AWS S3 to deploy your frontend code.
+Use AWS EC2 to deploy your backend code.
+Ensure the website is accessible publicly.
+
+Bonus requirements
+Use AWS CloudFront for CDN.
+Create a custom VPC with one private subnet and put your EC2 in it.
+
+Demo
+Provide a presentation of your work (PDF, PPT, online demo, etc.):
+Include an overview of your tech stack and architecture.
+Explain the deployment process to AWS.
+Provide a live demo or screenshots of the running website and its key features.
