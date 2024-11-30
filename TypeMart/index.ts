@@ -31,6 +31,18 @@ taxTotal = Number(product.price) * taxPercent;
 total = Number(product.price) + taxTotal + shipping; 
 
 
+function triple(value: number) {
+  return value * 3;
+}
+
+function greetTripled(greeting: string, value: number) {
+  console.log(`${greeting}, ${triple(value)}!`);
+}
+
+greetTripled('Hiya', 5);
+
+
+
 console.log(product);
 console.log(`Your receipt:
 Product:  ${product.name}
