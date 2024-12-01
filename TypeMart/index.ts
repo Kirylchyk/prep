@@ -35,13 +35,20 @@ function triple(value: number) {
   return value * 3;
 }
 
+////////////////////////////////////////////////////////////////
+
+function proclaim(status?: string) {
+  console.log(`I'm ${status || 'not ready...'}`);
+}
+
+proclaim(); // if not given params  
+proclaim('ready!');
+
 function greetTripled(greeting: string, value: number) {
   console.log(`${greeting}, ${triple(value)}!`);
 }
 
 greetTripled('Hiya', 10);
-
-
 
 console.log(product);
 console.log(`Your receipt:
