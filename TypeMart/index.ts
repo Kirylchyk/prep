@@ -30,12 +30,13 @@ taxTotal = Number(product.price) * taxPercent;
 
 total = Number(product.price) + taxTotal + shipping; 
 
+/////////////////////////////////////////////////////////////
 
-function triple(value: number) {
-  return value * 3;
+function greet(name = 'Anonymous') {
+  console.log(`Hello, ${name}!`);
 }
 
-////////////////////////////////////////////////////////////////
+greet('Varvara')
 
 function proclaim(status?: string) {
   console.log(`I'm ${status || 'not ready...'}`);
@@ -43,6 +44,17 @@ function proclaim(status?: string) {
 
 proclaim(); // if not given params  
 proclaim('ready!');
+
+function logGreeting(name:string): void{
+  console.log(`Hello, ${name}!`)
+}
+
+logGreeting("User!")
+
+
+function triple(value: number) {
+  return value * 3;
+}
 
 function greetTripled(greeting: string, value: number) {
   console.log(`${greeting}, ${triple(value)}!`);

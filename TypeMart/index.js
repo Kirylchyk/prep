@@ -26,12 +26,27 @@ else {
 }
 taxTotal = Number(product.price) * taxPercent;
 total = Number(product.price) + taxTotal + shipping;
+/////////////////////////////////////////////////////////////
+function greet(name) {
+    if (name === void 0) { name = 'Anonymous'; }
+    console.log("Hello, ".concat(name, "!"));
+}
+greet('Varvara');
+function proclaim(status) {
+    console.log("I'm ".concat(status || 'not ready...'));
+}
+proclaim(); // if not given params  
+proclaim('ready!');
+function logGreeting(name) {
+    console.log("Hello, ".concat(name, "!"));
+}
+logGreeting("User!");
 function triple(value) {
     return value * 3;
 }
 function greetTripled(greeting, value) {
     console.log("".concat(greeting, ", ").concat(triple(value), "!"));
 }
-greetTripled('Hiya', 5);
+greetTripled('Hiya', 10);
 console.log(product);
 console.log("Your receipt:\nProduct:  ".concat(product.name, "\nAddress:  ").concat(shippingAddress, "\nPrice:    $").concat(product.price, "\nTax:      $").concat(taxTotal.toFixed(2), "\nShipping: $").concat(shipping.toFixed(2), "\nTotal:    $").concat(total.toFixed(2), "\n"));
