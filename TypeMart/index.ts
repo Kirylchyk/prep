@@ -30,7 +30,11 @@ taxTotal = Number(product.price) * taxPercent;
 
 total = Number(product.price) + taxTotal + shipping; 
 
-/////////////////////////////////////////////////////////////
+/*
+Greeting section
+@param name str 
+@returns text with name 
+*/
 
 function greet(name = 'Anonymous') {
   console.log(`Hello, ${name}!`);
@@ -62,6 +66,8 @@ function greetTripled(greeting: string, value: number) {
 
 greetTripled('Hiya', 10);
 
+//////////////////////////////////////////////////////
+
 console.log(product);
 console.log(`Your receipt:
 Product:  ${product.name}
@@ -71,8 +77,4 @@ Tax:      $${taxTotal.toFixed(2)}
 Shipping: $${shipping.toFixed(2)}
 Total:    $${total.toFixed(2)}
 `);
-
-
-
-
 
