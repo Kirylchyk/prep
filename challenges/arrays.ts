@@ -19,3 +19,17 @@ let arr: string[] = ['there','there'];
 tup = ['there', 'there']; // No Errors.
 //tup = arr; // Type Error! An array cannot be assigned to a tuple.
 
+let tuple: [number, number, number] = [1,2,3];
+let concatResult = tuple.concat([4,5,6]); // concatResult has the value [1,2,3,4,5,6]
+
+// ... other/ rest params
+function addPower(p: number, ...numsToAdd: number[]): number {
+    let answer = 0;
+    for (let i = 0; i < numsToAdd.length; i++) {
+      answer += numsToAdd[i] ** p;
+    }
+    return answer;
+  }
+  
+  console.log(addPower(1, 2, 3, 4)); // 2^1+3^1+4^1 = 9
+  console.log(addPower(2, 2, 3, 4)); // 2^2+3^2+4^2 = 29
